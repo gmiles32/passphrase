@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import sys
 from random import randint
 
@@ -33,6 +35,21 @@ def make_dict(filename):
     
     return word_dict
 
+def print_words(words, num_words):
+    print("Thanks for using Passphrase! Use the folowing {} words in your passphrase:\n".format(num_words))
+    line = ''
+    for i in range(1,num_words + 1):
+        line = line + 'Word #{:<10}'.format(str(i))
+    print(line)
+
+    line = ''
+    for word in words:
+        line = line + '{:<16}'.format(word)
+    print(line)
+
+    print("\nBe sure to add other alphanumeric characters and capitalization to your new passphrase. Safe travels!")
+
+
 def gen_words():
     """
     Generates random keys for words dictionary, and returns a specified number of values.
@@ -65,7 +82,8 @@ def gen_words():
         word = word_dict[key]
         words.append(word)
 
-    print(words)
+    print_words(words, num_words)
 
 gen_words()
+
     
