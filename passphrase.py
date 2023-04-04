@@ -36,7 +36,7 @@ def make_dict(filename):
     return word_dict
 
 def print_words(words, num_words):
-    print("Thanks for using Passphrase! Use the folowing {} words in your passphrase:\n".format(num_words))
+    print("Thanks for using Passphrase! Use the following {} words in your passphrase:\n".format(num_words))
     line = ''
     for i in range(1,num_words + 1):
         line = line + 'Word #{:<10}'.format(str(i))
