@@ -82,8 +82,8 @@ def gen_words():
         word = word_dict[key]
         words.append(word)
 
-    print_words(words, num_words)
+    return words, num_words
 
-gen_words()
-
-    
+# Run program for command-line
+words, num_words = gen_words()
+print_words(words, num_words)
